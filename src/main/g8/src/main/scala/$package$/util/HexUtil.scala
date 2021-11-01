@@ -1,4 +1,4 @@
-package util
+package $package$.util
 
 object HexUtil:
 

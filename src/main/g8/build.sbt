@@ -4,8 +4,8 @@ Global / onChangedBuildSource := ReloadOnSourceChanges
 Laika / sourceDirectories := Seq(baseDirectory.value / "docs")
 
 ThisBuild / scalaVersion     := "3.1.0"
-ThisBuild / version          := "0.5.6"
-ThisBuild / organization     := "org.mbari"
+ThisBuild / version          := "0.0.1"
+ThisBuild / organization     := "$organization$"
 ThisBuild / organizationName := "MBARI"
 ThisBuild / startYear        := Some(2021)
 ThisBuild / versionScheme    := Some("semver-spec")
@@ -20,9 +20,8 @@ lazy val root = project
       HeaderLicense.Custom(
         """Copyright (c) Monterey Bay Aquarium Research Institute 2021
         |
-        |tapemigration code is non-public software. Unauthorized copying of this file,
+        |$name$ code is non-public software. Unauthorized copying of this file,
         |via any medium is strictly prohibited. Proprietary and confidential. 
-        |Written by: Brian Schlining <brian@mbari.org>
         |""".stripMargin
       )
     ),

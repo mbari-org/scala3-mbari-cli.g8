@@ -1,4 +1,4 @@
-package etc.circe
+package $package$.etc.circe
 
 import io.circe._
 import io.circe.generic.semiauto._
