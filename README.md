@@ -1,25 +1,19 @@
-scala3.g8: simple scala3-compiled sbt project template
-=================
-[![Build Status](https://travis-ci.com/scala/scala3.g8.svg?branch=master)](https://travis-ci.com/scala/scala3.g8/)
+# scala3-mbari-cli.g8
 
-A [Giter8][g8] template for a minimal [Scala 3] project.
+A [Giter8[http://www.foundweekends.org/giter8/] template to scaffold [Scala 3](https://www.scala-lang.org/) CLI apps for MBARI projects.
 
-Template usage
---------------
+## Usage
+
 Using `sbt`, do:
+
+```bash
+sbt new mbari-org/scala3-mbari.cli.g8
 ```
-sbt new scala/scala3.g8
-```
+
 in the folder where you want to clone the template.
 
-Template license
-----------------
-Written in 2017 by [Nicolas Stucki]
+## License
 
 To the extent possible under law, the author(s) have dedicated all copyright and related
 and neighboring rights to this template to the public domain worldwide.
 This template is distributed without any warranty. See <http://creativecommons.org/publicdomain/zero/1.0/>.
-
-[g8]: http://www.foundweekends.org/giter8/
-[Scala 3]: http://dotty.epfl.ch/
-[Nicolas Stucki]: https://github.com/nicolasstucki
