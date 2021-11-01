@@ -4,7 +4,7 @@ import io.circe._
 import io.circe.generic.semiauto._
 import scala.util.Try
 import java.net.URL
-import util.HexUtil
+import $package$.util.HexUtil
 
 object CirceCodecs:
 
