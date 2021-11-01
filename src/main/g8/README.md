@@ -15,7 +15,7 @@ This is a normal sbt project. You can compile code with `sbt compile`, run it wi
 
 ## Libraries
 
-- [circe](https://circe.github.io/circe/) for JSON hanling
+- [circe](https://circe.github.io/circe/) for JSON handling
 - [Methanol](https://github.com/mizosoft/methanol) with [Java's HttpClient](https://docs.oracle.com/en/java/javase/17/docs/api/java.net.http/java/net/http/HttpClient.html) for HTTP client
 - [munit](https://github.com/scalameta/munit) for testing
 - [picocli](https://picocli.info/) for command line arg parsing
