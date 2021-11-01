@@ -1,6 +1,6 @@
 # scala3-mbari-cli.g8
 
-A [Giter8[http://www.foundweekends.org/giter8/] template to scaffold [Scala 3](https://www.scala-lang.org/) CLI apps for MBARI projects.
+A [Giter8](http://www.foundweekends.org/giter8/) template to scaffold [Scala 3](https://www.scala-lang.org/) CLI apps for MBARI projects.
 
 ## Usage
 
