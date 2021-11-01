@@ -1,4 +1,4 @@
-package ext
+package $package$.ext.methanol
 
 import com.github.mizosoft.methanol.Methanol
 import com.github.mizosoft.methanol.Methanol.Interceptor.Chain
@@ -28,8 +28,8 @@ object LoggingInterceptor extends Methanol.Interceptor:
     log
       .atDebug()
       .log(() => s""" Sent >>>
-        |${request.method()} ${request.uri()}
-        |${headersToString(request.headers())}""".stripMargin.trim())
+        |\${request.method()} \${request.uri()}
+        |\${headersToString(request.headers())}""".stripMargin.trim())
 
   private def toLoggingChain[T](request: HttpRequest, chain: Chain[T]): Chain[T] =
 
@@ -39,9 +39,9 @@ object LoggingInterceptor extends Methanol.Interceptor:
       log
         .atDebug()
         .log(() =>
-          s""" Received <<< ${request.method()} ${request.uri()} in ${Duration.between(sentAt, Instant.now()).toMillis()}ms
-          |${responseInfo.statusCode()}
-          |${headersToString(responseInfo.headers())}""".stripMargin.trim()
+          s""" Received <<< \${request.method()} \${request.uri()} in \${Duration.between(sentAt, Instant.now()).toMillis()}ms
+          |\${responseInfo.statusCode()}
+          |\${headersToString(responseInfo.headers())}""".stripMargin.trim()
         )
       chain.bodyHandler().apply(responseInfo)
     )
@@ -52,6 +52,6 @@ object LoggingInterceptor extends Methanol.Interceptor:
       .map()
       .entrySet()
       .stream()
-      .map(e => s"${e.getKey()}: ${String.join(", ", e.getValue())}")
+      .map(e => s"\${e.getKey()}: \${String.join(", ", e.getValue())}")
       .collect(Collectors.joining(System.lineSeparator()))
       .trim()

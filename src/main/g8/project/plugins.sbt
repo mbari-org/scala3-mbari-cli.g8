@@ -1,3 +1,4 @@
+addSbtPlugin("com.codecommit"    % "sbt-github-packages" % "0.5.3")
 addSbtPlugin("com.timushev.sbt"  % "sbt-updates"         % "0.5.1")
 addSbtPlugin("com.typesafe.sbt"  % "sbt-git"             % "1.0.0")
 addSbtPlugin("com.typesafe.sbt"  % "sbt-native-packager" % "1.7.5")

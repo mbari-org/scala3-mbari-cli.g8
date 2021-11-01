@@ -6,7 +6,7 @@
 
   <!-- <statusListener class="ch.qos.logback.core.status.NopStatusListener" /> -->
 
-  <variable name="LOGBACK_LEVEL" value="${LOGBACK_LEVEL:-INFO}" />
+  <variable name="LOGBACK_LEVEL" value="\${LOGBACK_LEVEL:-INFO}" />
 
   <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
     <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
@@ -16,7 +16,7 @@
 
   <logger name="java.util.Date" level="WARN" />
 
-  <root level="${LOGBACK_LEVEL}">
+  <root level="\${LOGBACK_LEVEL}">
     <appender-ref ref="CONSOLE" />
   </root>
 

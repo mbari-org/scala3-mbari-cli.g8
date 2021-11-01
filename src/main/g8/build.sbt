@@ -12,8 +12,9 @@ ThisBuild / versionScheme    := Some("semver-spec")
 
 lazy val root = project
   .in(file("."))
+  .enablePlugins(AutomateHeaderPlugin, JavaAppPackaging, LaikaPlugin)
   .settings(
-    name := "foo",
+    name := "$name$",
     // sbt-header
     headerLicense := Some(
       HeaderLicense.Custom(
@@ -62,10 +63,10 @@ lazy val root = project
     )
   )
 
-  // https://stackoverflow.com/questions/22772812/using-sbt-native-packager-how-can-i-simply-prepend-a-directory-to-my-bash-scrip
+// https://stackoverflow.com/questions/22772812/using-sbt-native-packager-how-can-i-simply-prepend-a-directory-to-my-bash-scrip
 bashScriptExtraDefines ++= Seq(
-  """addJava "-Dconfig.file=${app_home}/../conf/application.conf"""",
-  """addJava "-Dlogback.configurationFile=${app_home}/../conf/logback.xml""""
+  """addJava "-Dconfig.file=\${app_home}/../conf/application.conf"""",
+  """addJava "-Dlogback.configurationFile=\${app_home}/../conf/logback.xml""""
 )
 batScriptExtraDefines ++= Seq(
   """call :add_java "-Dconfig.file=%APP_HOME%\conf\application.conf"""",

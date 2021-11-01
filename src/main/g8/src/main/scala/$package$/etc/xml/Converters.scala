@@ -1,4 +1,4 @@
-package etc.xml
+package $package$.etc.xml
 
 
 import org.w3c.dom.NodeList

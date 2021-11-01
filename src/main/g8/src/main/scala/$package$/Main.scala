@@ -1,4 +1,8 @@
+package $package$
+
 import java.util.concurrent.Callable
+import picocli.CommandLine
+import picocli.CommandLine.{Command, Option => Opt, Parameters}
 
 @Command(
   description = Array("A Main app"),
