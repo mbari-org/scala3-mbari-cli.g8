@@ -13,7 +13,7 @@ ThisBuild / versionScheme    := Some("semver-spec")
 lazy val root = project
   .in(file("."))
   .settings(
-    name := "$name$",
+    name := "\$name\$",
     // sbt-header
     headerLicense := Some(
       HeaderLicense.Custom(
