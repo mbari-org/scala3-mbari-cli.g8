@@ -12,6 +12,12 @@ sbt new mbari-org/scala3-mbari.cli.g8
 
 in the folder where you want to clone the template.
 
+## Development
+
+```bash
+sbt g8Test
+```
+
 ## License
 
 To the extent possible under law, the author(s) have dedicated all copyright and related
