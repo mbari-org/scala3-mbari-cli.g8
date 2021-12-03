@@ -12,9 +12,21 @@ ThisBuild / versionScheme    := Some("semver-spec")
 
 lazy val root = project
   .in(file("."))
-  .enablePlugins(AutomateHeaderPlugin, JavaAppPackaging, LaikaPlugin)
+  .enablePlugins(
+    AutomateHeaderPlugin, 
+    GitBranchPrompt, 
+    GitVersioning, 
+    JavaAppPackaging, 
+    LaikaPlugin)
   .settings(
     name := "$name$",
+    // Set version based on git tag. I use "0.0.0" format (no leading "v", which is the default)
+    // Use `show gitCurrentTags` in sbt to update/see the tags
+    git.gitTagToVersionNumber := { tag: String =>
+      if(tag matches "[0-9]+\\..*") Some(tag)
+      else None
+    },
+    git.useGitDescribe := true,
     // sbt-header
     headerLicense := Some(
       HeaderLicense.Custom(
