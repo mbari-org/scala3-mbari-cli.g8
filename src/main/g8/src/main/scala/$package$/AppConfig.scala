@@ -1,5 +1,8 @@
 package $package$
 
+import com.typesafe.config.ConfigFactory
+import scala.util.Try
+
 object AppConfig {
 
   val Config = ConfigFactory.load()
