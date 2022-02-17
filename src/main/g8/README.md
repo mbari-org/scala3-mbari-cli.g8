@@ -19,7 +19,7 @@ This is a normal sbt project. You can compile code with `sbt compile`, run it wi
 - [Methanol](https://github.com/mizosoft/methanol) with [Java's HttpClient](https://docs.oracle.com/en/java/javase/17/docs/api/java.net.http/java/net/http/HttpClient.html) for HTTP client
 - [munit](https://github.com/scalameta/munit) for testing
 - [picocli](https://picocli.info/) for command line arg parsing
-- [slf4j](http://www.slf4j.org/) with [logback](http://logback.qos.ch/) for logging
+- [slf4j](http://www.slf4j.org/) with [logback](http://logback.qos.ch/) for logging. Use java.lang.System.Logger
 - [ZIO](https://zio.dev/) for effects
 
 ## Notes

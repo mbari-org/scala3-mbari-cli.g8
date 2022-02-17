@@ -55,7 +55,7 @@ lazy val root = project
       methanol,
       munit          % Test,
       picocli,
-      slf4jApi,
+      slf4jJdk       % Runtime,
       typesafeConfig,
       zio
     ),

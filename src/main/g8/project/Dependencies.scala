@@ -13,9 +13,10 @@ object Dependencies {
   lazy val munit    = "org.scalameta"               %% "munit"           % "1.0.0-M1"
   lazy val picocli  = "info.picocli"                 % "picocli"         % "4.6.1"
 
-  lazy val slf4jVersion = "2.0.0-alpha5"
-  lazy val slf4jApi     = "org.slf4j"      % "slf4j-api"       % slf4jVersion
-  lazy val slf4jJul     = "org.slf4j"      % "jul-to-slf4j"    % slf4jVersion
+  lazy val slf4jVersion = "2.0.0-alpha6"
+  lazy val slf4jApi     = "org.slf4j"      % "slf4j-api"                    % slf4jVersion
+  lazy val slf4jJul     = "org.slf4j"      % "jul-to-slf4j"                 % slf4jVersion
+  lazy val slf4jJdk     = "org.slf4j"      % "slf4j-jdk-platform-logging"   % slf4jVersion
 
   lazy val typesafeConfig = "com.typesafe"   % "config"          % "1.4.1"
   lazy val zio            = "dev.zio"       %% "zio"             % "1.0.12"
