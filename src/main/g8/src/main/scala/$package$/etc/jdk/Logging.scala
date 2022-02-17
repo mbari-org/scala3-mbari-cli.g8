@@ -11,8 +11,7 @@ package $package$.etc.jdk
 
 import java.lang.System.Logger
 import java.lang.System.Logger.Level
-import java.util.function.Supplier
-import java.lang.invoke.MethodHandles
+import java.util.function.Suppliers
 
 
 /**
