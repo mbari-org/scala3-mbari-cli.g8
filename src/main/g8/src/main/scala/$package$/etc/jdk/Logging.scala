@@ -1,12 +1,4 @@
 
-/*
- * Copyright (c) Monterey Bay Aquarium Research Institute 2021
- *
- * FathomNet code is non-public software. Unauthorized copying of this file,
- * via any medium is strictly prohibited. Proprietary and confidential.
- * Written by: Brian Schlining <brian@mbari.org>
- */
-
 package $package$.etc.jdk
 
 import java.lang.System.Logger
@@ -23,7 +15,7 @@ import java.util.function.Suppliers
   * log.atInfo.log("Hello World")
   * log.atInfo.withCause(new RuntimeException("Oops")).log("Hello World")
   * 
-  * 3.tapLog.atInfo.log(i => s"Hello World $i")
+  * 3.tapLog.atInfo.log(i => "Hello World " + i)
   * }}}  * @author Brian Schlining
   */
 object Logging:
