@@ -7,7 +7,7 @@ A [Giter8](http://www.foundweekends.org/giter8/) template to scaffold [Scala 3](
 Using `sbt`, do:
 
 ```bash
-sbt new mbari-org/scala3-mbari.cli.g8
+sbt new mbari-org/scala3-mbari-cli.g8
 ```
 
 in the folder where you want to clone the template.
