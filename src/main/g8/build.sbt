@@ -30,7 +30,7 @@ lazy val root = project
     // sbt-header
     headerLicense := Some(
       HeaderLicense.Custom(
-        """Copyright (c) Monterey Bay Aquarium Research Institute 2021
+        """Copyright (c) Monterey Bay Aquarium Research Institute 2022
         |
         |$name$ code is non-public software. Unauthorized copying of this file,
         |via any medium is strictly prohibited. Proprietary and confidential. 

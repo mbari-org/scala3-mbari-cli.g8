@@ -1,5 +1,9 @@
 # $name$
 
+![Build](https://github.com/mbari-org/$name$/actions/workflows/test.yml/badge.svg)
+
+![MBARI logo](src/docs/images/logo-mbari-3b.png)
+
 MBARI sbt project compiled with Scala 3
 
 ## Usage
