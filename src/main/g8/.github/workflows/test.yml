@@ -24,4 +24,4 @@ jobs:
       - name: Run unit tests
         run: sbt test
         env:
-          GITHUB_TOKEN: ${{ github.token }}
+          GITHUB_TOKEN: \${{ github.token }}
