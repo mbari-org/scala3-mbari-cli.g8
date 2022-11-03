@@ -14,7 +14,7 @@ lazy val root = project
     crossScalaVersions := scalaVersions
   )
 
-ThisBuild / githubWorkflowJavaVersions := Seq("8", "11", "15")
+ThisBuild / githubWorkflowJavaVersions := Seq(JavaSpec.temurin("11"), JavaSpec.temurin("17"))
 ThisBuild / githubWorkflowScalaVersions := scalaVersions
 ThisBuild / githubWorkflowBuildPostamble := Seq(
   // This runs the template with the default parameters, and runs test within the templated app.
