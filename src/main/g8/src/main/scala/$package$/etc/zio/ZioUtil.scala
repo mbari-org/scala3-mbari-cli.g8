@@ -1,6 +1,6 @@
 package $package$.etc.zio
 
-import zio.{ZIO, Unsafe}
+import zio.*
 import $package$.etc.jdk.Logging.given
 import zio.Cause.Die
 
