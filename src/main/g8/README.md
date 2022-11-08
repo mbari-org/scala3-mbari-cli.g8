@@ -4,7 +4,7 @@
 
 ![MBARI logo](src/docs/images/logo-mbari-3b.png)
 
-MBARI sbt project compiled with Scala 3
+MBARI [sbt](https://www.scala-sbt.org) project compiled with [Scala 3](https://www.scala-lang.org)
 
 ## Usage
 
@@ -29,3 +29,5 @@ This is a normal sbt project. You can compile code with `sbt compile`, run it wi
 ## Notes
 
 Documentation can be added as markdown files in `docs` and will be included automatically when you run `laikaSite`.
+
+When updating SBT version, make sure to update the devcontainer image in [devcontainer.json](.devcontainer/devcontainer.json). It's versions are `eclipse-temurin-<java.version>_<sbt.version>_<scala.version>`
