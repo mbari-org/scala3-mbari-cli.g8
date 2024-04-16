@@ -1,3 +1,3 @@
 # $name$
 
-[API](api/index.html)
+[Scala API](api/index.html)

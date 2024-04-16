@@ -1,13 +1,20 @@
 import Dependencies._
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
-Laika / sourceDirectories := Seq(baseDirectory.value / "docs")
+Compile / doc / scalacOptions ++= Seq(
+    "-groups",
+    "-project-footer",
+    "Monterey Bay Aquarium Research Institute",
+    "-siteroot",
+    "src/docs",
+    "-doc-root-content",
+    "./src/docs/index.md"
+)
 
-ThisBuild / scalaVersion     := "3.2.0"
-ThisBuild / version          := "0.0.1"
+ThisBuild / scalaVersion     := "3.3.3"
 ThisBuild / organization     := "$organization$"
 ThisBuild / organizationName := "MBARI"
-ThisBuild / startYear        := Some(2021)
+ThisBuild / startYear        := Some(2024)
 ThisBuild / versionScheme    := Some("semver-spec")
 
 lazy val root = project
@@ -16,8 +23,8 @@ lazy val root = project
     AutomateHeaderPlugin, 
     GitBranchPrompt, 
     GitVersioning, 
-    JavaAppPackaging, 
-    LaikaPlugin)
+    JavaAppPackaging
+  )
   .settings(
     name := "$name$",
     // Set version based on git tag. I use "0.0.0" format (no leading "v", which is the default)
@@ -37,12 +44,7 @@ lazy val root = project
         |""".stripMargin
       )
     ),
-    javacOptions ++= Seq("-target", "11", "-source", "11"),
-    laikaExtensions := Seq(
-      laika.markdown.github.GitHubFlavor, 
-      laika.parse.code.SyntaxHighlighting
-    ),
-    laikaIncludeAPI := true,
+    javacOptions ++= Seq("-target", "21", "-source", "21"),
     resolvers ++= Seq(
       Resolver.githubPackages("mbari-org", "maven")
     ),
@@ -54,7 +56,7 @@ lazy val root = project
       logback        % Runtime,
       methanol,
       munit          % Test,
-      picocli,
+      mainargs,
       slf4jJdk       % Runtime,
       typesafeConfig,
       zio
@@ -68,9 +70,8 @@ lazy val root = project
       "-language:higherKinds",
       "-language:implicitConversions",
       "-language:postfixOps",
-      "-indent",
-      "-rewrite",
-      "-unchecked"
+      "-unchecked",
+      "-Vprofile"
     )
   )
 
