@@ -6,7 +6,7 @@ class Colors:
   
   def stringToHexColor(s: String): String =
       val c = intToRGBA(s.hashCode)
-      f"#${c.getRed}%02X${c.getGreen}%02X${c.getBlue}%02X" // ignore alpha. Sharktopoda won't parse colors with alpha
+      f"#\${c.getRed}%02X${c.getGreen}%02X${c.getBlue}%02X" // ignore alpha. Sharktopoda won't parse colors with alpha
 
   def intToRGBA(i: Int): Color =
       val a = brighten((i >> 24) & 0xff, 128)

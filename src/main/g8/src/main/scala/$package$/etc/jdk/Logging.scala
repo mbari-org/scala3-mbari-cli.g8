@@ -1,4 +1,3 @@
-
 package $package$.etc.jdk
 
 import java.lang.System.Logger
