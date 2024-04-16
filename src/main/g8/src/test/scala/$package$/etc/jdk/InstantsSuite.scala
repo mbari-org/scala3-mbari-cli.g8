@@ -17,4 +17,4 @@ class InstantsSuite extends munit.FunSuite:
             val s = f.format(now)
             Instants.parseIso8601(s) match
                 case Right(value) => // do nothing
-                case Left(e)      => fail(s"Failed to parse $s", e)
+                case Left(e)      => fail("Failed to parse " + s, e)
